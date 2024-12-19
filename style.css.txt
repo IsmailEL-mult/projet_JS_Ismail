@@ -1,0 +1,48 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Canvas ou Conteneur Principal */
+#gameCanvas {
+    display: block;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 2px solid #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Boutons ou Commandes */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Texte et titres */
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    margin: 10px auto;
+    max-width: 800px;
+    text-align: center;
+}

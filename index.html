@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu 2D Multijoueur avec Obstacles et Niveaux</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #gameContainer {
+            display: flex;
+            flex-direction: column;
+            width: 1000px;
+            height: 600px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .header {
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        #gameArea {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        canvas {
+            border: 2px solid orange;
+            background-color: #ffffff;
+        }
+
+        #winMessage {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 128, 0, 0.8);
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        #timer {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #audioControl {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <div class="header">
+            <h1>Jeu 2D Multijoueur</h1>
+            <p>Contrôles : Z Q S D (Joueur 1) | Flèches (Joueur 2)</p>
+        </div>
+
+        <div id="gameArea">
+            <canvas id="gameCanvas" width="800" height="500"></canvas>
+            <div id="winMessage">Victoire !</div>
+            <div id="timer">Temps : 0s</div>
+        </div>
+
+        <div id="audioControl">
+           <audio id="gameAudio" src="C:/Users/Lenovo/Desktop/ismail jeu 2D/a.mp3" autoplay></audio>
+
+            <button id="playButton">Play Audio</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
